@@ -1,0 +1,38 @@
+{
+  "bikes": [
+    {
+      "id": 2,
+      "nombre": "Bicicleta de Carretera",
+      "descripcion": "Bicicleta de carretera con marco de acero de alta calidad con doble freno de disco y sistema de cambio de 21 velocidades. Radios de aluminio y ruedas de 3 radios disponibles para elegir. Antes de terminar el pago para el pedido, asegúrate de que el estilo de rueda es lo que deseas.",
+      "precio": "249.00",
+      "disponible": true,
+      "marca": "Eurobike",
+      "categoria": "Road Bike",
+      "imagen": "https://m.media-amazon.com/images/I/712SL7O5vmS._AC_SX425_.jpg"
+    }
+  ],
+  "prestamos": [
+    {}
+  ],
+  "devoluciones": [
+    {}
+  ],
+  "clientes": [
+    {}
+  ],
+  "usuarios": [
+    {}
+  ],
+  "categorias": [
+    {
+      "id": 1,
+      "nombre": "Road Bike"
+    }
+  ],
+  "marcas": [
+    {
+      "id": 1,
+      "nombre": "Eurobike"
+    }
+  ]
+}

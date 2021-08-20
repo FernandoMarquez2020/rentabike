@@ -1,0 +1,58 @@
+<div class="row">
+    <div class="col-8 offset-md-2">
+        <form class="row g-3">
+            <div class="col-8">
+                <label for="validationServer01" class="form-label">Nombre</label>
+                <input autocomplete="off" type="text" (input)="handleNameInput($event)" [(ngModel)]="bike.nombre" class="form-control {{nombre_valid}}" name="nombre" id="validationServer01" value="Mark" required>
+                <div *ngIf="nombre_valid.length > 0" class="invalid-feedback">
+                    El campo nombre es obligatorio
+                </div>
+            </div>
+            <div class="col-4">
+                <label for="validationServerUsername" class="form-label">Precio</label>
+                <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend3">$</span>
+                    <input autocomplete="off" type="number" (input)="handlePrecioInput($event)" [(ngModel)]="bike.precio" class="form-control {{precio_valid}}" name="precio" id="validationServerUsername" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback"
+                        required>
+                    <div *ngIf="precio_valid.length > 0" id="validationServerUsernameFeedback" class="invalid-feedback">
+                        El campo precio es obligatorio.
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <label for="validationServer03" class="form-label">Imagen</label>
+                <input [(ngModel)]="bike.imagen" type="text" class="form-control is-invalid" name="imagen" id="validationServer03" aria-describedby="validationServer03Feedback" required>
+                <div id="validationServer03Feedback" class="invalid-feedback">
+                    Entre el campo Imagen.
+                </div>
+            </div>
+            <div class="col-6">
+                <label for="validationServer04" class="form-label">Categoria</label>
+                <select [(ngModel)]="selectedCategoria" (change)="changeCategoria()" class="form-select {{categoria_valid}}" id="validationServer04" name="categoria" aria-describedby="validationServer04Feedback" required>
+        <option selected disabled value="">Choose...</option>
+        <option *ngFor="let item of categorias">{{item.nombre}}</option>
+      </select>
+                <div id="validationServer04Feedback" class="invalid-feedback">
+                    Por favor seleccione una Categoria.
+                </div>
+            </div>
+            <div class="col-6">
+                <label for="validationServer04" class="form-label">Marca</label>
+                <select [(ngModel)]="selectedMarca" (change)="changeMarca()" class="form-select {{marca_valid}}" name="marca" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+      <option selected disabled value="">Choose...</option>
+      <option *ngFor="let item of marcas">{{item.nombre}}</option>
+    </select>
+                <div id="validationServer04Feedback" class="invalid-feedback">
+                    Please select a valid state.
+                </div>
+            </div>
+            <div class="col-12">
+                <label for="validationTextarea" class="form-label">Descripcion</label>
+                <textarea [(ngModel)]="bike.descripcion" class="form-control" name="descripcion" id="validationTextarea" placeholder="Required example textarea" required></textarea>
+            </div>
+            <div class="col-12">
+                <button (click)="guardar()" class="btn btn-primary">Guardar</button>
+            </div>
+        </form>
+    </div>
+</div>
