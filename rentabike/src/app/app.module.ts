@@ -12,6 +12,8 @@ import { DetalleBikeComponent } from './bikes/detalle-bike/detalle-bike.componen
 import { ListadoProductosComponent } from './abms/productos/listado-productos/listado-productos.component';
 import { NuevoProductosComponent } from './abms/productos/nuevo-productos/nuevo-productos.component';
 import { FormsModule } from '@angular/forms';
+import { ListadoClientesComponent } from './abms/clientes/listado-clientes/listado-clientes.component';
+import { NuevoClienteComponent } from './abms/clientes/nuevo-cliente/nuevo-cliente.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { FormsModule } from '@angular/forms';
     NuevoPrestamoComponent,
     DetalleBikeComponent,
     ListadoProductosComponent,
-    NuevoProductosComponent
+    NuevoProductosComponent,
+    ListadoClientesComponent,
+    NuevoClienteComponent
   ],
   imports: [
     BrowserModule,

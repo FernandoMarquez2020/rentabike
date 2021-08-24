@@ -6,12 +6,13 @@
         </form>
     </div>
 </div>
+
 <br>
 <div class="row">
     <div class="col-6">
         <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
+            <input autocomplete="off" (input)="handlerInput($event)" class="form-control me-2" name="termino" [(ngModel)]="termino" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" (click)="filtrar()" type="button">Search</button>
         </form>
     </div>
 </div>

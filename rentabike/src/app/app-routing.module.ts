@@ -1,3 +1,5 @@
+import { NuevoClienteComponent } from './abms/clientes/nuevo-cliente/nuevo-cliente.component';
+import { ListadoClientesComponent } from './abms/clientes/listado-clientes/listado-clientes.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ListadoProductosComponent } from './abms/productos/listado-productos/listado-productos.component';
@@ -20,6 +22,15 @@ const routes: Routes = [
   },
   {
     path:"gestion/nuevo-producto/:id",component:NuevoProductosComponent
+  },
+  {
+    path:"gestion/clientes",component:ListadoClientesComponent
+  },
+  {
+    path:"gestion/nuevo-cliente",component:NuevoClienteComponent
+  },
+  {
+    path:"gestion/nuevo-cliente/:id",component:NuevoClienteComponent
   },
 ];
 

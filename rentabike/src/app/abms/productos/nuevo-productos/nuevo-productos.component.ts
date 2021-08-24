@@ -29,6 +29,8 @@ precio_valid = "";
 categoria_valid = "";
 marca_valid = "";
 id = 0;
+showToast = "";
+message = ""
   constructor(
     private _categoriaService:CategoriaService,
     private _marcaService:MarcaService,
@@ -62,15 +64,19 @@ id = 0;
         //creando una nueva bike
         this._productoService.postBike(this.bike).subscribe(response=>{
           this.cleanForm();
+          this.message = "El producto se inserto correctamente";
         });
       }
       else{
         this._productoService.putBike(this.bike).subscribe(response=>{
           this.cleanForm();
+          this.message = "El producto se modifico correctamente";
         });
       }
-
-
+      this.showToast = "show";
+    }
+    else{
+      // error de servidor
     }
   }
 
