@@ -1,0 +1,25 @@
+{
+    "bikes": [{
+        "id": 1,
+        "nombre": "GT BMX AIR",
+        "imagen": "https://www.deceleste.com.uy/wp-content/uploads/2019/09/GT-BMX_AIR.png",
+        "descripcion": "Rodado 20” / Cuadro en Acero GT FS Design / Horquilla GT FS Design. Transmisión Cassette de 9T dientes y plato de 25T. COMPONENTES: Engranaje Power Series Cr - Mo 3 piezas, palancas 170 mm, eje centro Cr - Mo 19 mm, eje del.15 mm / trasero 17 mm.",
+        "categoria": "BMX",
+        "marca": "GT",
+        "disponible": true,
+        "precio": "521",
+        "modelo": "AIR"
+    }],
+    "prestamos": [
+        {}
+    ],
+    "devoluciones": [
+        {}
+    ],
+    "clientes": [
+        {}
+    ],
+    "usuarios": [
+        {}
+    ]
+}
