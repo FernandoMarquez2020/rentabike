@@ -28,4 +28,8 @@ export class ClienteService {
   getById(id:number){
     return this._http.get(this.url + "/" + id);
   }
+
+  filter(key:any,value:any){
+    return this._http.get(this.url + "/?"+key + "=" + value);
+  }
 }

@@ -1,16 +1,18 @@
 <div class="card" style="margin-bottom: 15px;text-align: center;">
-    <img src="" class="card-img-top" alt="...">
+    <img [src]="bike.imagen" width="50px" height="200px" class="card-img-top" alt="...">
     <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <h5 class="card-title">{{bike.nombre | uppercase}}</h5>
+        <p class="card-text">
+            {{bike.descripcion}}
+        </p>
     </div>
     <ul class="list-group list-group-flush">
-        <li class="list-group-item">An item</li>
-        <li class="list-group-item">A second item</li>
-        <li class="list-group-item">A third item</li>
+        <li class="list-group-item">{{bike.categoria}}</li>
+        <li class="list-group-item">{{bike.marca}}</li>
+        <li class="list-group-item" style="font-weight: bold;color: green;">${{bike.precio}}</li>
     </ul>
-    <div class="card-body">
-        <a style="margin: 3px;" href="#" class="btn btn-outline-primary">Detalle</a>
-        <a style="margin: 3px;" routerLink="/nuevo-prestamo" href="#" class="btn btn-outline-danger">Rentar</a>
+    <div class="card-body" *ngIf="caller === 'listado'">
+        <a style="margin: 3px;" href="#" routerLink="bikes/bike/0" class="btn btn-outline-primary">Detalle</a>
+        <a style="margin: 3px;" [routerLink]="['/gestion/prestamos/nuevo-prestamo/',bike.id]" href="#" class="btn btn-outline-danger">Rentar</a>
     </div>
 </div>

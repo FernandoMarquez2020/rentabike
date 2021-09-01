@@ -8,10 +8,13 @@ import { ProductoService } from 'src/app/gestion/producto.service';
 })
 export class ListadoBikeComponent implements OnInit {
 
+  productos:any;
   constructor(private _bikeService: ProductoService) { }
 
   ngOnInit(): void {
-
+    this._bikeService.getBikes().subscribe(response => {
+      this.productos = response;
+    });
   }
 
 }

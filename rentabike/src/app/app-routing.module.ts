@@ -1,3 +1,7 @@
+import { DetalleBikeComponent } from './bikes/detalle-bike/detalle-bike.component';
+import { NotFoundComponent } from './shared/not-found/not-found.component';
+import { ListadoPrestamosComponent } from './gestion/prestamos/listado-prestamos/listado-prestamos.component';
+import { ListadoDevolucionComponent } from './gestion/devolucion/listado-devolucion/listado-devolucion.component';
 import { NuevoClienteComponent } from './abms/clientes/nuevo-cliente/nuevo-cliente.component';
 import { ListadoClientesComponent } from './abms/clientes/listado-clientes/listado-clientes.component';
 import { NgModule } from '@angular/core';
@@ -5,14 +9,21 @@ import { RouterModule, Routes } from '@angular/router';
 import { ListadoProductosComponent } from './abms/productos/listado-productos/listado-productos.component';
 import { NuevoProductosComponent } from './abms/productos/nuevo-productos/nuevo-productos.component';
 import { ListadoBikeComponent } from './bikes/listado-bike/listado-bike.component';
-import { NuevoPrestamoComponent } from './gestion/nuevo-prestamo/nuevo-prestamo.component';
+import { NuevoPrestamoComponent } from './gestion/prestamos/nuevo-prestamo/nuevo-prestamo.component';
+import { NuevaDevolucionComponent } from './gestion/devolucion/nueva-devolucion/nueva-devolucion.component';
 
 const routes: Routes = [
   {
     path:"",component:ListadoBikeComponent
   },
   {
-    path:"nuevo-prestamo",component:NuevoPrestamoComponent
+    path:"bikes/bike/:id", component: DetalleBikeComponent
+  },
+  {
+    path:"gestion/prestamos/nuevo-prestamo/:bike",component:NuevoPrestamoComponent
+  },
+  {
+    path:"gestion/prestamos/listado-prestamo",component:ListadoPrestamosComponent
   },
   {
     path:"gestion/productos",component:ListadoProductosComponent
@@ -32,6 +43,15 @@ const routes: Routes = [
   {
     path:"gestion/nuevo-cliente/:id",component:NuevoClienteComponent
   },
+  {
+    path: "gestion/devolucion/listado-devolucion", component:ListadoDevolucionComponent
+  },
+  {
+    path: "gestion/devolucion/nueva-devolucion", component:NuevaDevolucionComponent
+  },
+  {
+    path:"**",component:NotFoundComponent
+  }
 ];
 
 @NgModule({

@@ -10,10 +10,10 @@
                     <a class="nav-link active" aria-current="page" [routerLink]="'/'">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Prestamos</a>
+                    <a class="nav-link" href="#" routerLink="/gestion/prestamos/listado-prestamo">Prestamos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Devoluciones</a>
+                    <a class="nav-link" href="#" routerLink="/gestion/devolucion/listado-devolucion">Devoluciones</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -35,11 +35,7 @@
 
 <div class="container">
     <div class="row" style="margin-top:45px;">
-        <div class="col-3">
-            <!-- barra lateral -->
-            <app-sidebar></app-sidebar>
-        </div>
-        <div class="col-9">
+        <div class="col-12">
             <!-- area de navegacion -->
             <router-outlet></router-outlet>
         </div>

@@ -19,7 +19,7 @@ export class ListadoClientesComponent implements OnInit {
     });
   }
 
-  eliminarProducto(id){
+  eliminarCliente(id){
 
     Swal.fire({
       title: 'Estas seguro?',

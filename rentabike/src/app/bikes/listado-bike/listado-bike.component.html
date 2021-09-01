@@ -8,22 +8,7 @@
 </div>
 <br>
 <div class="row">
-    <div class="col-4">
-        <app-bike></app-bike>
-    </div>
-    <div class="col-4">
-        <app-bike></app-bike>
-    </div>
-    <div class="col-4">
-        <app-bike></app-bike>
-    </div>
-    <div class="col-4">
-        <app-bike></app-bike>
-    </div>
-    <div class="col-4">
-        <app-bike></app-bike>
-    </div>
-    <div class="col-4">
-        <app-bike></app-bike>
+    <div class="col-4" *ngFor="let producto of productos">
+        <app-bike [caller]="'listado'" [bike]="producto"></app-bike>
     </div>
 </div>
