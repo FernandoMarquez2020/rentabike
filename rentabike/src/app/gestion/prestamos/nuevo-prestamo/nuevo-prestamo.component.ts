@@ -1,3 +1,4 @@
+import { PrestamoService } from './../prestamo.service';
 import { ClienteService } from './../../../abms/clientes/service/cliente.service';
 import { ProductoService } from 'src/app/gestion/producto.service';
 import { ActivatedRoute } from '@angular/router';
@@ -13,6 +14,7 @@ export class NuevoPrestamoComponent implements OnInit {
   cliente = null;
   cedula = "";
   formCliente = false;
+  formPrestamo = true;
   clienteData = {
     "id": 0,
     "nombre": "",
@@ -22,10 +24,20 @@ export class NuevoPrestamoComponent implements OnInit {
     "telefono": "",
     "direccion": ""
 }
+prestamo = {
+  "id":0,
+  "bike_id":0,
+  "cliente_id":0,
+  "fecha":"",
+  "duracion":0,
+  "importe":0
+}
+clienteId = 0;
   constructor(
     private _route: ActivatedRoute,
     private _productoService:ProductoService,
-    private _clienteService: ClienteService
+    private _clienteService: ClienteService,
+    private _prestamoService: PrestamoService
     ) { }
 
   ngOnInit(): void {
@@ -33,6 +45,7 @@ export class NuevoPrestamoComponent implements OnInit {
       let id = parseInt(param.get('bike'));
       this._productoService.getById(id).subscribe(response=>{
         this.bike = response;
+        this.prestamo.bike_id = this.bike.id;
       })
     })
   }
@@ -42,10 +55,22 @@ export class NuevoPrestamoComponent implements OnInit {
       if(response[0] !== undefined){
         this.cliente = response[0];
         this.formCliente = false;
+        this.clienteData = this.cliente
+        this.formPrestamo = true;
+        this.prestamo.cliente_id = this.cliente.id;
       }
       else{
-        console.log("!! no");
         this.formCliente = true;
+        this.formPrestamo = false;
+        this.clienteData = {
+          "id": 0,
+          "nombre": "",
+          "edad": "",
+          "cedula": "",
+          "mail": "",
+          "telefono": "",
+          "direccion": ""
+      }
       }
 
     })
@@ -59,7 +84,21 @@ export class NuevoPrestamoComponent implements OnInit {
   }
 
   guardarCliente(){
-    this.formCliente = false;
+    this.clienteData.cedula = this.cedula;
+    this._clienteService.postCliente(this.clienteData).subscribe(response =>{
+      this.cliente = response;
+      this.clienteData = this.cliente;
+      this.formCliente = false;
+      this.formPrestamo = true;
+      this.prestamo.cliente_id = this.cliente.id;
+    });
+  }
+
+
+  aceptarPrestamo(){
+    this._prestamoService.postPrestamo(this.prestamo).subscribe(response=>{
+      console.log("nuevo prestamo",response)
+    })
   }
 
 }

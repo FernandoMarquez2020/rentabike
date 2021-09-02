@@ -22,7 +22,22 @@
     }
   ],
   "prestamos": [
-    {}
+    {
+      "id": 1,
+      "bike_id": 3,
+      "cliente_id": 1,
+      "fecha": "2021-05-02",
+      "duracion": 9,
+      "importe": 34
+    },
+    {
+      "id": 2,
+      "bike_id": 3,
+      "cliente_id": 10,
+      "fecha": "2021-09-02",
+      "duracion": 3,
+      "importe": "123"
+    }
   ],
   "devoluciones": [
     {}
@@ -45,6 +60,60 @@
       "mail": "t@mail.com",
       "telefono": "89454847",
       "direccion": "roque graseras 769 apto 601\t5\njuan maria perez"
+    },
+    {
+      "id": 3,
+      "nombre": "Juan",
+      "edad": "34",
+      "cedula": 3543553,
+      "mail": "p90gmail.com",
+      "telefono": "97698563",
+      "direccion": "roque graseras 769 apto 601\t5\njuan maria perez"
+    },
+    {
+      "id": 4,
+      "nombre": "TEST",
+      "edad": "34",
+      "cedula": 64475346,
+      "mail": "euryet@gmail.com",
+      "telefono": "97698563",
+      "direccion": ""
+    },
+    {
+      "id": 6,
+      "nombre": "Pedro",
+      "edad": "78",
+      "cedula": 456566666,
+      "mail": "euryet@gmail.com",
+      "telefono": "",
+      "direccion": "567890"
+    },
+    {
+      "id": 8,
+      "nombre": "Juan Lopez",
+      "edad": "25",
+      "cedula": 1111111111,
+      "mail": "lolo@gmail.com",
+      "telefono": "97355673",
+      "direccion": "fjkdt"
+    },
+    {
+      "id": 9,
+      "nombre": "Codyas",
+      "edad": "25",
+      "cedula": 1111111100,
+      "mail": "euryet@gmail.com",
+      "telefono": "56987456",
+      "direccion": ""
+    },
+    {
+      "id": 10,
+      "nombre": "Pedro",
+      "edad": "55",
+      "cedula": 45678909,
+      "mail": "euryet@gmail.com",
+      "telefono": "56987456",
+      "direccion": ""
     }
   ],
   "usuarios": [

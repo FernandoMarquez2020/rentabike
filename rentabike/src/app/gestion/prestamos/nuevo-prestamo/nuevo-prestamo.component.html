@@ -11,7 +11,7 @@
             </div>
             <div class="col-md-9">
                 <label for="validationCustom02" class="form-label">Nombre</label>
-                <input type="text" value="{{cliente !== null ? cliente.nombre: ''}}" class="form-control" id="validationCustom02" required>
+                <input type="text" [(ngModel)]="clienteData.nombre" class="form-control" name="nombre" id="validationCustom02" required>
                 <div class="valid-feedback">
                     Looks good!
                 </div>
@@ -20,7 +20,7 @@
                 <label for="validationCustomUsername" class="form-label">Mail</label>
                 <div class="input-group has-validation">
                     <span class="input-group-text" id="inputGroupPrepend">@</span>
-                    <input type="text" value="{{cliente !== null ? cliente.mail: ''}}" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                    <input type="text" [(ngModel)]="clienteData.mail" name="mail" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
                     <div class="invalid-feedback">
                         Please choose a username.
                     </div>
@@ -28,7 +28,7 @@
             </div>
             <div class="col-md-4">
                 <label for="validationCustom03" class="form-label">Telefono</label>
-                <input type="text" class="form-control" value="{{cliente !== null ? cliente.telefono: ''}}" id="validationCustom03" required>
+                <input type="text" class="form-control" [(ngModel)]="clienteData.telefono" name="telefono" id="validationCustom03" required>
                 <div class="invalid-feedback">
                     Please provide a valid city.
                 </div>
@@ -36,19 +36,52 @@
             <div class="wrapper" *ngIf="formCliente">
                 <div class="col-md-6">
                     <label for="validationCustom05" class="form-label">Edad</label>
-                    <input type="text" class="form-control" id="validationCustom05" required>
+                    <input type="text" name="edad" [(ngModel)]="clienteData.edad" class="form-control" id="validationCustom05" required>
                     <div class="invalid-feedback">
                         Please provide a valid zip.
                     </div>
                 </div>
                 <div class="col-12">
                     <label for="validationTextarea" class="form-label">Direccion</label>
-                    <textarea class="form-control" name="direccion" id="validationTextarea" placeholder="Required example textarea" required></textarea>
+                    <textarea class="form-control" [(ngModel)]="clienteData.direccion" name="direccion" id="validationTextarea" placeholder="Required example textarea" required></textarea>
                 </div>
+            </div>
+            <div class="col-12" *ngIf="formPrestamo">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="validationCustom05" class="form-label">Fecha</label>
+                        <input type="date" name="fecha" [(ngModel)]="prestamo.fecha" class="form-control" id="validationCustom05" required>
+                        <div class="invalid-feedback">
+                            Please provide a valid zip.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="validationCustom05" class="form-label">Duracion</label>
+                        <input type="number" name="duracion" [(ngModel)]="prestamo.duracion" class="form-control" id="validationCustom05" required>
+                        <div class="invalid-feedback">
+                            Please provide a valid zip.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="validationCustom05" class="form-label">Precio</label>
+                        <input type="text" class="form-control" disabled value="{{bike!==null? bike.precio: ''}}" id="validationCustom05" required>
+                        <div class="invalid-feedback">
+                            Please provide a valid zip.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="validationCustom05" class="form-label">Importe Total</label>
+                        <input type="text" name="importe" [(ngModel)]="prestamo.importe" class="form-control" id="validationCustom05" required>
+                        <div class="invalid-feedback">
+                            Please provide a valid zip.
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
             <div class="col-12">
-                <button *ngIf="cliente !== null" class="btn btn-primary" type="submit">Aceptar</button>
+                <button *ngIf="cliente !== null" (click)="aceptarPrestamo()" class="btn btn-primary" type="submit">Aceptar</button>
                 <button *ngIf="formCliente" (click)="guardarCliente()" class="btn btn-primary" type="submit">Guardar Cliente</button>
             </div>
         </form>

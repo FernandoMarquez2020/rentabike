@@ -57,6 +57,7 @@ cleanForm(){
         this._clienteService.postCliente(this.cliente).subscribe(response=>{
           this.cleanForm();
           this.message = "El cliente se inserto correctamente";
+          console.log("!!! respuesta a la pregunta del profe",response)
         });
       }
       else{
