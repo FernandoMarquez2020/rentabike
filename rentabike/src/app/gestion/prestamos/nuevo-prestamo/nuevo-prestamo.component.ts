@@ -12,6 +12,16 @@ export class NuevoPrestamoComponent implements OnInit {
   bike = null;
   cliente = null;
   cedula = "";
+  formCliente = false;
+  clienteData = {
+    "id": 0,
+    "nombre": "",
+    "edad": "",
+    "cedula": "",
+    "mail": "",
+    "telefono": "",
+    "direccion": ""
+}
   constructor(
     private _route: ActivatedRoute,
     private _productoService:ProductoService,
@@ -31,9 +41,11 @@ export class NuevoPrestamoComponent implements OnInit {
     this._clienteService.filter("cedula",this.cedula).subscribe(response=>{
       if(response[0] !== undefined){
         this.cliente = response[0];
+        this.formCliente = false;
       }
       else{
-        console.log("!! no")
+        console.log("!! no");
+        this.formCliente = true;
       }
 
     })
@@ -44,6 +56,10 @@ export class NuevoPrestamoComponent implements OnInit {
       this.cliente = null;
       this.buscarClientes();
     }
+  }
+
+  guardarCliente(){
+    this.formCliente = false;
   }
 
 }

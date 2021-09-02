@@ -33,36 +33,23 @@
                     Please provide a valid city.
                 </div>
             </div>
-            <div class="col-md-3">
-                <label for="validationCustom04" class="form-label">State</label>
-                <select class="form-select" id="validationCustom04" required>
-              <option selected disabled value="">Choose...</option>
-              <option>...</option>
-            </select>
-                <div class="invalid-feedback">
-                    Please select a valid state.
-                </div>
-            </div>
-            <div class="col-md-3">
-                <label for="validationCustom05" class="form-label">Zip</label>
-                <input type="text" class="form-control" id="validationCustom05" required>
-                <div class="invalid-feedback">
-                    Please provide a valid zip.
-                </div>
-            </div>
-            <div class="col-12">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                    <label class="form-check-label" for="invalidCheck">
-                Agree to terms and conditions
-              </label>
+            <div class="wrapper" *ngIf="formCliente">
+                <div class="col-md-6">
+                    <label for="validationCustom05" class="form-label">Edad</label>
+                    <input type="text" class="form-control" id="validationCustom05" required>
                     <div class="invalid-feedback">
-                        You must agree before submitting.
+                        Please provide a valid zip.
                     </div>
                 </div>
+                <div class="col-12">
+                    <label for="validationTextarea" class="form-label">Direccion</label>
+                    <textarea class="form-control" name="direccion" id="validationTextarea" placeholder="Required example textarea" required></textarea>
+                </div>
             </div>
+
             <div class="col-12">
                 <button *ngIf="cliente !== null" class="btn btn-primary" type="submit">Aceptar</button>
+                <button *ngIf="formCliente" (click)="guardarCliente()" class="btn btn-primary" type="submit">Guardar Cliente</button>
             </div>
         </form>
     </div>
