@@ -1,7 +1,7 @@
 import { PrestamoService } from './../prestamo.service';
 import { ClienteService } from './../../../abms/clientes/service/cliente.service';
 import { ProductoService } from 'src/app/gestion/producto.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -35,6 +35,7 @@ prestamo = {
 clienteId = 0;
   constructor(
     private _route: ActivatedRoute,
+    private _router: Router,
     private _productoService:ProductoService,
     private _clienteService: ClienteService,
     private _prestamoService: PrestamoService
@@ -98,6 +99,7 @@ clienteId = 0;
   aceptarPrestamo(){
     this._prestamoService.postPrestamo(this.prestamo).subscribe(response=>{
       console.log("nuevo prestamo",response)
+      //this._router.navigate('')
     })
   }
 
