@@ -1,0 +1,332 @@
+{
+  "bikes": [
+    {
+      "id": 2,
+      "nombre": "Bicicleta de Carretera",
+      "descripcion": "Bicicleta de carretera con marco de acero de alta calidad con doble freno de disco y sistema de cambio de 28 velocidades. Radios de aluminio y ruedas de 3 radios disponibles para elegir. Antes de terminar el pago para el pedido, asegúrate de que el estilo de rueda es lo que deseas.",
+      "precio": 250,
+      "disponible": true,
+      "marca": "Eurobike",
+      "categoria": "Road Bike",
+      "imagen": "https://m.media-amazon.com/images/I/712SL7O5vmS._AC_SX425_.jpg"
+    },
+    {
+      "id": 5,
+      "nombre": "bici2",
+      "descripcion": "",
+      "precio": 30,
+      "disponible": true,
+      "marca": "Eurobike",
+      "categoria": "Road Bike",
+      "imagen": "https://m.media-amazon.com/images/I/712SL7O5vmS._AC_SX425_.jpg"
+    },
+    {
+      "id": 6,
+      "nombre": "Carrera2",
+      "descripcion": "carrera",
+      "precio": 200,
+      "disponible": true,
+      "marca": "Eurobike",
+      "categoria": "Road Bike",
+      "imagen": "https://m.media-amazon.com/images/I/712SL7O5vmS._AC_SX425_.jpg"
+    },
+    {
+      "id": 7,
+      "nombre": "jj",
+      "descripcion": "",
+      "precio": 80,
+      "disponible": true,
+      "marca": "Eurobike",
+      "categoria": "Road Bike",
+      "imagen": "https://m.media-amazon.com/images/I/712SL7O5vmS._AC_SX425_.jpg"
+    },
+    {
+      "id": 9,
+      "nombre": "jio88",
+      "descripcion": "",
+      "precio": 89,
+      "disponible": true,
+      "marca": "Eurobike",
+      "categoria": "Road Bike",
+      "imagen": "https://m.media-amazon.com/images/I/712SL7O5vmS._AC_SX425_.jpg"
+    },
+    {
+      "id": 10,
+      "nombre": "nnnn",
+      "descripcion": "",
+      "precio": 90,
+      "disponible": true,
+      "marca": "Eurobike",
+      "categoria": "Road Bike",
+      "imagen": "https://m.media-amazon.com/images/I/712SL7O5vmS._AC_SX425_.jpg"
+    },
+    {
+      "id": 11,
+      "nombre": "jjj70",
+      "descripcion": "Actualmente ",
+      "precio": 40,
+      "disponible": true,
+      "marca": "Eurobike",
+      "categoria": "Road Bike",
+      "imagen": "https://m.media-amazon.com/images/I/712SL7O5vmS._AC_SX425_.jpg"
+    },
+    {
+      "id": 12,
+      "nombre": "jo60",
+      "descripcion": "ult",
+      "precio": 70,
+      "disponible": true,
+      "marca": "Eurobike",
+      "categoria": "Road Bike",
+      "imagen": "https://m.media-amazon.com/images/I/712SL7O5vmS._AC_SX425_.jpg"
+    },
+    {
+      "id": 13,
+      "nombre": "jo50",
+      "descripcion": "ulllt2",
+      "precio": 20,
+      "disponible": true,
+      "marca": "Eurobike",
+      "categoria": "Road Bike",
+      "imagen": "https://m.media-amazon.com/images/I/712SL7O5vmS._AC_SX425_.jpg"
+    },
+    {
+      "id": 14,
+      "nombre": "jo40",
+      "descripcion": "ult4",
+      "precio": 20,
+      "disponible": true,
+      "marca": "Eurobike",
+      "categoria": "Road Bike",
+      "imagen": "https://m.media-amazon.com/images/I/712SL7O5vmS._AC_SX425_.jpg"
+    },
+    {
+      "id": 16,
+      "nombre": "kkk",
+      "descripcion": "",
+      "precio": 7,
+      "disponible": true,
+      "marca": "Eurobike",
+      "categoria": "Road Bike",
+      "imagen": "https://m.media-amazon.com/images/I/712SL7O5vmS._AC_SX425_.jpg"
+    },
+    {
+      "id": 17,
+      "nombre": "mm",
+      "descripcion": "",
+      "precio": 9,
+      "disponible": true,
+      "marca": "Eurobike",
+      "categoria": "Road Bike",
+      "imagen": "https://m.media-amazon.com/images/I/712SL7O5vmS._AC_SX425_.jpg"
+    },
+    {
+      "id": 18,
+      "nombre": "carrera3",
+      "descripcion": "",
+      "precio": 100,
+      "disponible": true,
+      "marca": "Eurobike",
+      "categoria": "Road Bike",
+      "imagen": "https://m.media-amazon.com/images/I/712SL7O5vmS._AC_SX425_.jpg"
+    }
+  ],
+  "prestamos": [
+    {
+      "id": 1,
+      "bike_id": 3,
+      "cliente_id": 1,
+      "fecha": "2021-05-02",
+      "duracion": 9,
+      "importe": 34
+    },
+    {
+      "id": 2,
+      "bike_id": 3,
+      "cliente_id": 10,
+      "fecha": "2021-09-02",
+      "duracion": 3,
+      "importe": "123"
+    },
+    {
+      "id": 3,
+      "bike_id": 3,
+      "cliente_id": 12,
+      "fecha": "",
+      "duracion": 0,
+      "importe": 0
+    },
+    {
+      "id": 4,
+      "bike_id": 3,
+      "cliente_id": 12,
+      "fecha": "",
+      "duracion": 0,
+      "importe": 0
+    },
+    {
+      "id": 5,
+      "bike_id": 3,
+      "cliente_id": 12,
+      "fecha": "",
+      "duracion": 0,
+      "importe": 0
+    },
+    {
+      "id": 6,
+      "bike_id": 3,
+      "cliente_id": 12,
+      "fecha": "",
+      "duracion": 0,
+      "importe": 0
+    },
+    {
+      "id": 7,
+      "bike_id": 3,
+      "cliente_id": 12,
+      "fecha": "",
+      "duracion": 0,
+      "importe": 0
+    },
+    {
+      "id": 8,
+      "bike_id": 3,
+      "cliente_id": 12,
+      "fecha": "",
+      "duracion": 0,
+      "importe": 0
+    },
+    {
+      "id": 9,
+      "bike_id": 3,
+      "cliente_id": 2,
+      "fecha": "",
+      "duracion": 2,
+      "importe": "100"
+    },
+    {
+      "id": 10,
+      "bike_id": 3,
+      "cliente_id": 2,
+      "fecha": "",
+      "duracion": 2,
+      "importe": "100"
+    },
+    {
+      "id": 11,
+      "bike_id": 3,
+      "cliente_id": 13,
+      "fecha": "",
+      "duracion": 0,
+      "importe": 0
+    },
+    {
+      "id": 12,
+      "bike_id": 5,
+      "cliente_id": 17,
+      "fecha": "",
+      "duracion": 0,
+      "importe": 0
+    },
+    {
+      "id": 13,
+      "bike_id": 9,
+      "cliente_id": 18,
+      "fecha": "",
+      "duracion": 0,
+      "importe": 0
+    }
+  ],
+  "devoluciones": [
+    {}
+  ],
+  "clientes": [
+    {
+      "id": 13,
+      "nombre": "Fernando1",
+      "edad": "18",
+      "cedula": 3333,
+      "mail": "nandillo@hotmail.com",
+      "telefono": "5559898",
+      "direccion": "47 street"
+    },
+    {
+      "id": 18,
+      "nombre": "roberto",
+      "edad": "34",
+      "cedula": 7777,
+      "mail": "rolo@mail.com",
+      "telefono": "555-0999",
+      "direccion": "route 66"
+    },
+    {
+      "id": 19,
+      "nombre": "benjamin",
+      "edad": "20",
+      "cedula": 2222,
+      "mail": "bj@cdije.com",
+      "telefono": "555078",
+      "direccion": ""
+    },
+    {
+      "id": 20,
+      "nombre": "lolo",
+      "edad": "32",
+      "cedula": 97878,
+      "mail": "@gdg",
+      "telefono": "3334",
+      "direccion": ""
+    },
+    {
+      "id": 21,
+      "nombre": "lshjnd",
+      "edad": "22",
+      "cedula": 222222,
+      "mail": "@232",
+      "telefono": "22222",
+      "direccion": ""
+    },
+    {
+      "id": 22,
+      "nombre": "dddd",
+      "edad": "11",
+      "cedula": 111111,
+      "mail": "@1111",
+      "telefono": "11111",
+      "direccion": ""
+    },
+    {
+      "id": 23,
+      "nombre": "3333333",
+      "edad": "33",
+      "cedula": 333333,
+      "mail": "@6666",
+      "telefono": "33333",
+      "direccion": ""
+    },
+    {
+      "id": 24,
+      "nombre": "3434",
+      "edad": "43r",
+      "cedula": 443,
+      "mail": "34f",
+      "telefono": "f434f",
+      "direccion": ""
+    }
+  ],
+  "usuarios": [
+    {}
+  ],
+  "categorias": [
+    {
+      "id": 1,
+      "nombre": "Road Bike"
+    }
+  ],
+  "marcas": [
+    {
+      "id": 1,
+      "nombre": "Eurobike"
+    }
+  ]
+}

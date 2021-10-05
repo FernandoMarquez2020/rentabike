@@ -1,0 +1,69 @@
+
+<app-toast aria-live="polite" aria-atomic="true"></app-toast>
+
+<div class="row" style="display: flex;flex-direction: row;justify-content: flex-end;">
+    <div class="toast {{showToast}}" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <!-- <img src="" class="rounded me-2" alt=""> -->
+            <strong class="me-auto">Informacion</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            {{message}}
+        </div>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-8 offset-md-2">
+        <form class="row g-3">
+            <div class="col-8">
+                <label for="validationServer01" class="form-label">Nombre</label>
+                <input autocomplete="off" type="text" (input)="handleNameInput($event)" [(ngModel)]="cliente.nombre" class="form-control {{nombre_valid}}" name="nombre" id="validationServer01" value="Mark" required>
+                <div *ngIf="nombre_valid.length > 0" class="invalid-feedback">
+                    El campo nombre es obligatorio
+                </div>
+            </div>
+            <div class="col-4">
+                <label for="validationServerUsername" class="form-label">Cedula</label>
+                <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend3">CI</span>
+                    <input autocomplete="off" type="number" (input)="handleCedulaInput($event)" [(ngModel)]="cliente.cedula" class="form-control {{cedula_valid}}" name="cedula" id="validationServerUsername" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback"
+                        required>
+                    <div *ngIf="cedula_valid.length > 0" id="validationServerUsernameFeedback" class="invalid-feedback">
+                        El campo cedula es obligatorio.
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <label for="validationServer01" class="form-label">Edad</label>
+                <input autocomplete="off" type="text" (input)="handleEdadInput($event)" [(ngModel)]="cliente.edad" class="form-control {{edad_valid}}" name="edad" id="validationServer01" value="Mark" required>
+                <div *ngIf="edad_valid.length > 0" class="invalid-feedback">
+                    El campo Edad es obligatorio
+                </div>
+            </div>
+            <div class="col-6">
+                <label for="validationServer01" class="form-label">Telefono</label>
+                <input autocomplete="off" type="text" (input)="handleTelefonoInput($event)" [(ngModel)]="cliente.telefono" class="form-control {{telefono_valid}}" name="telefono" id="validationServer01" value="Mark" required>
+                <div *ngIf="telefono_valid.length > 0" class="invalid-feedback">
+                    El campo telefono es obligatorio
+                </div>
+            </div>
+            <div class="col-12">
+                <label for="validationServer01" class="form-label">Mail</label>
+                <input autocomplete="off" type="text" (input)="handleMailInput($event)" [(ngModel)]="cliente.mail" class="form-control {{mail_valid}}" name="mail" id="validationServer01" value="Mark" required>
+                <div *ngIf="mail_valid.length > 0" class="invalid-feedback">
+                    El campo mail es obligatorio
+                </div>
+            </div>
+            <div class="col-12">
+                <label for="validationTextarea" class="form-label">Direccion</label>
+                <textarea [(ngModel)]="cliente.direccion" class="form-control" name="direccion" id="validationTextarea" placeholder="Required example textarea" required></textarea>
+            </div>
+            <div class="col-12">
+                <button (click)="guardar()" class="btn btn-primary">Guardar</button>
+                <app-toast aria-live="polite" aria-atomic="true"></app-toast>
+            </div>
+        </form>
+    </div>
+</div>

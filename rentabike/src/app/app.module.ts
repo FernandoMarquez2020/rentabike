@@ -17,6 +17,7 @@ import { NuevoClienteComponent } from './abms/clientes/nuevo-cliente/nuevo-clien
 import { ListadoDevolucionComponent } from './gestion/devolucion/listado-devolucion/listado-devolucion.component';
 import { NuevaDevolucionComponent } from './gestion/devolucion/nueva-devolucion/nueva-devolucion.component';
 import { NotFoundComponent } from './shared/not-found/not-found.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { NotFoundComponent } from './shared/not-found/not-found.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

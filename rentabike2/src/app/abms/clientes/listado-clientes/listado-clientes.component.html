@@ -1,0 +1,93 @@
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">Nuevo Cliente</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <app-nuevo-cliente></app-nuevo-cliente>
+    <div class="modal-footer">
+      <!-- <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button> -->
+    </div>
+  </ng-template>
+
+
+
+<div class="row">
+    <div class="col-6">
+        <form class="d-flex">
+            <h4>Gestion - Clientes</h4>
+            <a (click)="openLg(content)" class="btn btn-outline-primary" style="margin-left: 10px;" type="submit">Nuevo</a>
+        </form>
+    </div>
+</div>
+
+
+<br>
+ <div class="row">
+    <div class="col-6">
+        <form class="d-flex">
+            <input autocomplete="off" (input)="handlerInput($event)" class="form-control me-2" name="termino" [(ngModel)]="termino" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" (click)="filtrar()" type="button">Search</button>
+        </form>
+    </div>
+</div>
+<br> 
+<div class="row border border-primary">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Cedula</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Mail</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Direccion</th>
+                <th scope="col">Accion</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cliente of clientes">
+                <td>{{cliente.cedula}}</td>
+                <td>{{cliente.nombre}}</td>
+                <td>{{cliente.mail}}</td>
+                <td>{{cliente.telefono}}</td>
+                <td>{{cliente.direccion}}</td>
+                <td><a class="btn btn-primary" value={{clientes}} (click)="open2(cliente)" style="margin-right:4px">Editar</a><a (click)="eliminarCliente(cliente.id)" class="btn btn-danger">Eliminar</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<hr>
+
+<div class="row">
+    <p>Table is just a mapping of objects to table rows with <code>ngFor</code></p>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+                <th scope="col">Cedula</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Mail</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Direccion</th>
+                <th scope="col">Accion</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cliente of clientes">
+      <td>{{cliente.cedula}}</td>
+      <td>{{cliente.nombre}}</td>
+      <td>{{cliente.mail}}</td>
+      <td>{{cliente.telefono}}</td>
+      <td>{{cliente.direccion}}</td>
+      <td><a class="btn btn-primary" (click)="openLg(cliente.id)" style="margin-right:4px">Editar</a><a (click)="eliminarCliente(cliente.id)" class="btn btn-danger">Eliminar</a></td>
+  </tr>
+  </tbody>
+</table>
+</div> 
+
+<hr>
+
+<app-lista-clientes></app-lista-clientes>
